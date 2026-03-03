@@ -58,6 +58,8 @@ export default {
           ring: "hsl(var(--sidebar-ring))",
         },
         glow: "hsl(var(--glow))",
+        success: "hsl(var(--success))",
+        warning: "hsl(var(--warning))",
       },
       borderRadius: {
         lg: "var(--radius)",
