@@ -1,0 +1,34 @@
+import { Shield } from "lucide-react";
+import { Separator } from "@/components/ui/separator";
+
+const Footer = () => {
+  return (
+    <footer className="border-t border-border bg-card/50 py-12">
+      <div className="container mx-auto px-4 lg:px-8">
+        <div className="flex flex-col md:flex-row items-center justify-between gap-6">
+          <div className="flex items-center gap-2">
+            <Shield className="h-5 w-5 text-primary" />
+            <span className="text-sm font-bold tracking-tight text-foreground">
+              AEGIS<span className="text-primary">CYBER</span>
+            </span>
+          </div>
+
+          <div className="flex flex-wrap items-center justify-center gap-6 text-xs text-muted-foreground">
+            <a href="#" className="hover:text-foreground transition-colors">Privacy Policy</a>
+            <a href="#" className="hover:text-foreground transition-colors">Terms of Service</a>
+            <a href="#" className="hover:text-foreground transition-colors">Responsible Disclosure</a>
+            <a href="#" className="hover:text-foreground transition-colors">Careers</a>
+          </div>
+        </div>
+
+        <Separator className="my-8" />
+
+        <p className="text-center text-xs text-muted-foreground/60">
+          © {new Date().getFullYear()} AegisCyber. All rights reserved. Classified engagements handled under appropriate national frameworks.
+        </p>
+      </div>
+    </footer>
+  );
+};
+
+export default Footer;
