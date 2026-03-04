@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Download, ShieldCheck, Award, Lock, Globe, Fingerprint } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const trustBadges = [
   { icon: ShieldCheck, label: "ISO 27001" },
@@ -58,10 +59,10 @@ const HeroSection = () => {
             transition={{ duration: 0.7, delay: 0.3 }}
           >
             <Button size="lg" className="glow-md text-base font-semibold px-8 h-12" asChild>
-              <a href="#contact">
+              <Link to="/demo">
                 Book a Confidential Demo
                 <ArrowRight className="ml-2 h-4 w-4" />
-              </a>
+              </Link>
             </Button>
             <Button variant="outline" size="lg" className="text-base h-12 px-8 border-border hover:border-primary/50" asChild>
               <a href="#capabilities">

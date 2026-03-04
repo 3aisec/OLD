@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { Menu, Shield } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const navLinks = [
   { label: "Product", href: "#product" },
@@ -50,7 +51,7 @@ const Navbar = () => {
 
         <div className="hidden md:block">
           <Button size="sm" className="glow-sm font-semibold" asChild>
-            <a href="#contact">Book a Demo</a>
+            <Link to="/demo">Book a Demo</Link>
           </Button>
         </div>
 
@@ -72,7 +73,7 @@ const Navbar = () => {
                 </a>
               ))}
               <Button className="mt-4 glow-sm" asChild>
-                <a href="#contact">Book a Demo</a>
+                <Link to="/demo">Book a Demo</Link>
               </Button>
             </nav>
           </SheetContent>
