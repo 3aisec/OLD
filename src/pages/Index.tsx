@@ -7,7 +7,6 @@ import SectorsSection from "@/components/landing/SectorsSection";
 import TrustSection from "@/components/landing/TrustSection";
 import ProcessSection from "@/components/landing/ProcessSection";
 import Footer from "@/components/landing/Footer";
-import Footer from "@/components/landing/Footer";
 
 const Index = () => {
   return (
