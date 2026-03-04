@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Download, ShieldCheck, Award, Lock, Globe, Fingerprint } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const trustBadges = [
   { icon: ShieldCheck, label: "ISO 27001" },
