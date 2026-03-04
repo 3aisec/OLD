@@ -9,7 +9,7 @@ const navLinks = [
   { label: "Services", href: "#services" },
   { label: "Sectors", href: "#sectors" },
   { label: "Trust", href: "#trust" },
-  { label: "Contact", href: "#contact" },
+  { label: "Contact", href: "/contact", isRoute: true },
 ];
 
 const Navbar = () => {
