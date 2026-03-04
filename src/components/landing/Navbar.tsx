@@ -73,7 +73,7 @@ const Navbar = () => {
                 </a>
               ))}
               <Button className="mt-4 glow-sm" asChild>
-                <a href="#contact">Book a Demo</a>
+                <Link to="/demo">Book a Demo</Link>
               </Button>
             </nav>
           </SheetContent>

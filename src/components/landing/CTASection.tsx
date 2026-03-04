@@ -25,9 +25,11 @@ const CTASection = () => {
           </p>
 
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-            <Button size="lg" className="glow-md text-base font-semibold px-8 h-12">
-              <ArrowRight className="mr-2 h-4 w-4" />
-              Book a Confidential Demo
+            <Button size="lg" className="glow-md text-base font-semibold px-8 h-12" asChild>
+              <Link to="/demo">
+                <ArrowRight className="mr-2 h-4 w-4" />
+                Book a Confidential Demo
+              </Link>
             </Button>
             <Button variant="outline" size="lg" className="text-base h-12 px-8 border-border hover:border-primary/50">
               <Mail className="mr-2 h-4 w-4" />
