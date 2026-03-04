@@ -9,7 +9,7 @@ const navLinks = [
   { label: "Services", href: "#services" },
   { label: "Sectors", href: "#sectors" },
   { label: "Trust", href: "#trust" },
-  { label: "Contact", href: "#contact" },
+  { label: "Contact", href: "/contact", isRoute: true },
 ];
 
 const Navbar = () => {
@@ -38,15 +38,25 @@ const Navbar = () => {
         </a>
 
         <nav className="hidden md:flex items-center gap-6">
-          {navLinks.map((link) => (
-            <a
-              key={link.href}
-              href={link.href}
-              className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
-            >
-              {link.label}
-            </a>
-          ))}
+          {navLinks.map((link) =>
+            link.isRoute ? (
+              <Link
+                key={link.href}
+                to={link.href}
+                className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
+              >
+                {link.label}
+              </Link>
+            ) : (
+              <a
+                key={link.href}
+                href={link.href}
+                className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
+              >
+                {link.label}
+              </a>
+            )
+          )}
         </nav>
 
         <div className="hidden md:block">
@@ -63,15 +73,25 @@ const Navbar = () => {
           </SheetTrigger>
           <SheetContent side="right" className="bg-background border-border">
             <nav className="flex flex-col gap-4 mt-8">
-              {navLinks.map((link) => (
-                <a
-                  key={link.href}
-                  href={link.href}
-                  className="text-base font-medium text-muted-foreground hover:text-foreground transition-colors py-2"
-                >
-                  {link.label}
-                </a>
-              ))}
+              {navLinks.map((link) =>
+                link.isRoute ? (
+                  <Link
+                    key={link.href}
+                    to={link.href}
+                    className="text-base font-medium text-muted-foreground hover:text-foreground transition-colors py-2"
+                  >
+                    {link.label}
+                  </Link>
+                ) : (
+                  <a
+                    key={link.href}
+                    href={link.href}
+                    className="text-base font-medium text-muted-foreground hover:text-foreground transition-colors py-2"
+                  >
+                    {link.label}
+                  </a>
+                )
+              )}
               <Button className="mt-4 glow-sm" asChild>
                 <Link to="/demo">Book a Demo</Link>
               </Button>

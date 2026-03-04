@@ -6,7 +6,6 @@ import ServicesSection from "@/components/landing/ServicesSection";
 import SectorsSection from "@/components/landing/SectorsSection";
 import TrustSection from "@/components/landing/TrustSection";
 import ProcessSection from "@/components/landing/ProcessSection";
-import CTASection from "@/components/landing/CTASection";
 import Footer from "@/components/landing/Footer";
 
 const Index = () => {
@@ -20,7 +19,6 @@ const Index = () => {
       <SectorsSection />
       <TrustSection />
       <ProcessSection />
-      <CTASection />
       <Footer />
     </div>
   );
