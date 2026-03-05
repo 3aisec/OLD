@@ -184,7 +184,7 @@ const Contact = () => {
                     <MapPin className="h-5 w-5 text-primary mt-0.5 shrink-0" />
                     <div>
                       <p className="text-sm font-medium text-foreground">Location</p>
-                      <p className="text-sm text-muted-foreground">Zürich, Switzerland</p>
+                      <p className="text-sm text-muted-foreground">Switzerland</p>
                     </div>
                   </div>
 
