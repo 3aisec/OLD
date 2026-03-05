@@ -12,6 +12,7 @@ import {
   SelectValue,
 } from "@/components/ui/select";
 import { Shield, ArrowRight, Mail, Phone, MapPin, Clock, Send } from "lucide-react";
+import zurichMap from "@/assets/zurich-map.png";
 import { useToast } from "@/hooks/use-toast";
 import { Link } from "react-router-dom";
 
