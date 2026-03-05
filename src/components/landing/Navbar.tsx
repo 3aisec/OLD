@@ -1,15 +1,28 @@
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
-import { Menu, Shield } from "lucide-react";
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu";
+import { Menu, Shield, ChevronDown } from "lucide-react";
 import { Link } from "react-router-dom";
 
 const navLinks = [
+  { label: "Home", href: "/", isRoute: true },
   { label: "Product", href: "#product" },
   { label: "Services", href: "#services" },
-  { label: "Sectors", href: "#sectors" },
-  { label: "Trust", href: "#trust" },
+  { label: "Demo", href: "/demo", isRoute: true },
+  { label: "Careers", href: "/careers", isRoute: true },
   { label: "Contact", href: "/contact", isRoute: true },
+];
+
+const legalLinks = [
+  { label: "Privacy Policy", href: "/privacy" },
+  { label: "Terms of Service", href: "/terms" },
+  { label: "Responsible Disclosure", href: "/disclosure" },
 ];
 
 const Navbar = () => {
@@ -30,14 +43,14 @@ const Navbar = () => {
       }`}
     >
       <div className="container mx-auto flex h-16 items-center justify-between px-4 lg:px-8">
-        <a href="#" className="flex items-center gap-2">
+        <Link to="/" className="flex items-center gap-2">
           <Shield className="h-7 w-7 text-primary" />
           <span className="text-lg font-bold tracking-tight text-foreground">
             AEGIS<span className="text-primary">CYBER</span>
           </span>
-        </a>
+        </Link>
 
-        <nav className="hidden md:flex items-center gap-6">
+        <nav className="hidden lg:flex items-center gap-5">
           {navLinks.map((link) =>
             link.isRoute ? (
               <Link
@@ -57,16 +70,31 @@ const Navbar = () => {
               </a>
             )
           )}
+
+          {/* Legal dropdown */}
+          <DropdownMenu>
+            <DropdownMenuTrigger className="flex items-center gap-1 text-sm font-medium text-muted-foreground hover:text-foreground transition-colors outline-none">
+              Legal <ChevronDown className="h-3.5 w-3.5" />
+            </DropdownMenuTrigger>
+            <DropdownMenuContent align="end">
+              {legalLinks.map((link) => (
+                <DropdownMenuItem key={link.href} asChild>
+                  <Link to={link.href}>{link.label}</Link>
+                </DropdownMenuItem>
+              ))}
+            </DropdownMenuContent>
+          </DropdownMenu>
         </nav>
 
-        <div className="hidden md:block">
+        <div className="hidden lg:block">
           <Button size="sm" className="glow-sm font-semibold" asChild>
             <Link to="/demo">Book a Demo</Link>
           </Button>
         </div>
 
+        {/* Mobile */}
         <Sheet>
-          <SheetTrigger asChild className="md:hidden">
+          <SheetTrigger asChild className="lg:hidden">
             <Button variant="ghost" size="icon">
               <Menu className="h-5 w-5" />
             </Button>
@@ -92,6 +120,18 @@ const Navbar = () => {
                   </a>
                 )
               )}
+              <div className="border-t border-border pt-4 mt-2">
+                <p className="text-xs font-semibold text-muted-foreground uppercase tracking-wider mb-3">Legal</p>
+                {legalLinks.map((link) => (
+                  <Link
+                    key={link.href}
+                    to={link.href}
+                    className="block text-base font-medium text-muted-foreground hover:text-foreground transition-colors py-2"
+                  >
+                    {link.label}
+                  </Link>
+                ))}
+              </div>
               <Button className="mt-4 glow-sm" asChild>
                 <Link to="/demo">Book a Demo</Link>
               </Button>
