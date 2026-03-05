@@ -12,6 +12,7 @@ import {
   SelectValue,
 } from "@/components/ui/select";
 import { Shield, ArrowRight, Mail, Phone, MapPin, Clock, Send } from "lucide-react";
+import zurichMap from "@/assets/zurich-map.png";
 import { useToast } from "@/hooks/use-toast";
 import { Link } from "react-router-dom";
 
@@ -183,7 +184,7 @@ const Contact = () => {
                     <MapPin className="h-5 w-5 text-primary mt-0.5 shrink-0" />
                     <div>
                       <p className="text-sm font-medium text-foreground">Location</p>
-                      <p className="text-sm text-muted-foreground">Zürich, Switzerland</p>
+                      <p className="text-sm text-muted-foreground">Switzerland</p>
                     </div>
                   </div>
 
@@ -197,40 +198,16 @@ const Contact = () => {
                 </div>
               </div>
 
-              {/* Simple Map Illustration */}
+              {/* Static Map Image */}
               <div className="rounded-xl border border-border bg-card overflow-hidden shadow-sm">
-                <div className="relative h-56 bg-secondary/50 flex items-center justify-center">
-                  {/* Stylized world map with Zürich pin */}
-                  <svg viewBox="0 0 400 200" className="w-full h-full p-4 text-muted-foreground/20" fill="none">
-                    {/* Simplified continent outlines */}
-                    <ellipse cx="200" cy="100" rx="180" ry="80" stroke="currentColor" strokeWidth="0.5" opacity="0.4" />
-                    <ellipse cx="200" cy="100" rx="140" ry="60" stroke="currentColor" strokeWidth="0.5" opacity="0.3" />
-                    <ellipse cx="200" cy="100" rx="100" ry="40" stroke="currentColor" strokeWidth="0.5" opacity="0.2" />
-                    {/* Grid lines */}
-                    <line x1="20" y1="100" x2="380" y2="100" stroke="currentColor" strokeWidth="0.3" opacity="0.3" />
-                    <line x1="200" y1="20" x2="200" y2="180" stroke="currentColor" strokeWidth="0.3" opacity="0.3" />
-                    <line x1="110" y1="20" x2="110" y2="180" stroke="currentColor" strokeWidth="0.3" opacity="0.15" />
-                    <line x1="290" y1="20" x2="290" y2="180" stroke="currentColor" strokeWidth="0.3" opacity="0.15" />
-                    <line x1="20" y1="60" x2="380" y2="60" stroke="currentColor" strokeWidth="0.3" opacity="0.15" />
-                    <line x1="20" y1="140" x2="380" y2="140" stroke="currentColor" strokeWidth="0.3" opacity="0.15" />
-                    {/* Continental shapes (stylized) */}
-                    <path d="M120 55 L140 50 L160 52 L170 60 L165 75 L145 80 L125 70 Z" fill="currentColor" opacity="0.15" />
-                    <path d="M150 82 L165 78 L175 85 L170 100 L155 105 L145 95 Z" fill="currentColor" opacity="0.15" />
-                    <path d="M220 55 L260 48 L280 55 L290 70 L270 85 L240 80 L225 68 Z" fill="currentColor" opacity="0.15" />
-                    <path d="M290 60 L330 50 L360 65 L350 90 L320 95 L295 80 Z" fill="currentColor" opacity="0.15" />
-                    <path d="M100 100 L130 95 L140 105 L130 130 L110 140 L95 125 Z" fill="currentColor" opacity="0.15" />
-                    <path d="M310 105 L350 100 L370 120 L355 145 L325 140 L310 125 Z" fill="currentColor" opacity="0.15" />
-                  </svg>
-                  {/* Zürich Pin */}
-                  <div className="absolute" style={{ top: "34%", left: "52%" }}>
-                    <div className="relative flex flex-col items-center">
-                      <div className="h-3 w-3 rounded-full bg-primary ring-4 ring-primary/20 animate-pulse" />
-                      <div className="mt-1.5 px-2 py-0.5 rounded bg-primary text-primary-foreground text-[10px] font-semibold whitespace-nowrap shadow-sm">
-                        Zürich
-                      </div>
-                    </div>
-                  </div>
-                </div>
+                <img
+                  src={zurichMap}
+                  alt="Map showing Zürich, Switzerland region"
+                  className="w-full h-56 object-cover"
+                />
+                <p className="text-center text-sm text-muted-foreground py-3">
+                  Based in Zürich, Switzerland
+                </p>
               </div>
             </div>
           </motion.div>
