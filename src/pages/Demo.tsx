@@ -11,9 +11,9 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select";
-import { Shield, ArrowRight, Lock, Monitor, Globe, ShieldCheck, Award, Fingerprint } from "lucide-react";
-import { useToast } from "@/hooks/use-toast";
-import { Link } from "react-router-dom";
+import { Shield, ArrowRight, Lock, Monitor, Globe, ShieldCheck, Award, Fingerprint, AlertCircle } from "lucide-react";
+import { Link, useNavigate } from "react-router-dom";
+import { supabase } from "@/integrations/supabase/client";
 
 const interests = [
   "CDR/IPDR Analytics",
@@ -69,22 +69,48 @@ const certBadges = [
 ];
 
 const Demo = () => {
-  const { toast } = useToast();
+  const navigate = useNavigate();
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [error, setError] = useState<string | null>(null);
+  const [interest, setInterest] = useState("");
 
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setIsSubmitting(true);
+    setError(null);
 
-    // Simulate submission
-    setTimeout(() => {
+    const form = e.target as HTMLFormElement;
+    const formData = new FormData(form);
+
+    const payload = {
+      name: formData.get("name") as string,
+      email: formData.get("email") as string,
+      organization: formData.get("organization") as string,
+      role: formData.get("role") as string,
+      phone: formData.get("phone") as string,
+      interest,
+      message: formData.get("message") as string,
+      sourceUrl: window.location.href,
+    };
+
+    try {
+      const { data, error: fnError } = await supabase.functions.invoke(
+        "send-demo-email",
+        { body: payload }
+      );
+
+      if (fnError) throw fnError;
+      if (data?.error) throw new Error(data.error);
+
+      navigate("/thank-you?type=demo");
+    } catch (err) {
+      console.error("Demo form submission error:", err);
+      setError(
+        "Something went wrong. Please email us directly at contact@insight-weave.com."
+      );
+    } finally {
       setIsSubmitting(false);
-      toast({
-        title: "Demo request received",
-        description: "Our team will contact you within 24 hours to schedule your confidential demo.",
-      });
-      (e.target as HTMLFormElement).reset();
-    }, 1200);
+    }
   };
 
   return (
@@ -144,6 +170,13 @@ const Demo = () => {
             transition={{ duration: 0.6, delay: 0.2 }}
           >
             <div className="rounded-xl border border-border bg-card p-6 sm:p-10 shadow-sm">
+              {error && (
+                <div className="mb-6 flex items-start gap-3 rounded-lg border border-destructive/30 bg-destructive/5 p-4">
+                  <AlertCircle className="h-5 w-5 text-destructive mt-0.5 shrink-0" />
+                  <p className="text-sm text-destructive">{error}</p>
+                </div>
+              )}
+
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                   <div className="space-y-2">
@@ -168,7 +201,7 @@ const Demo = () => {
                   </div>
                   <div className="space-y-2">
                     <Label htmlFor="interest">Primary Interest</Label>
-                    <Select name="interest">
+                    <Select value={interest} onValueChange={setInterest}>
                       <SelectTrigger>
                         <SelectValue placeholder="Select an area" />
                       </SelectTrigger>
