@@ -107,18 +107,6 @@ const Navbar = () => {
                   </a>
                 )
               )}
-              <div className="border-t border-border pt-4 mt-2">
-                <p className="text-xs font-semibold text-muted-foreground uppercase tracking-wider mb-3">Legal</p>
-                {legalLinks.map((link) => (
-                  <Link
-                    key={link.href}
-                    to={link.href}
-                    className="block text-base font-medium text-muted-foreground hover:text-foreground transition-colors py-2"
-                  >
-                    {link.label}
-                  </Link>
-                ))}
-              </div>
               <Button className="mt-4 glow-sm" asChild>
                 <Link to="/demo">Book a Demo</Link>
               </Button>
