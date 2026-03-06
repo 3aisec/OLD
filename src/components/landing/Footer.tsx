@@ -6,7 +6,7 @@ const Footer = () => {
   return (
     <footer className="border-t border-border bg-card/50 py-12">
       <div className="container mx-auto px-4 lg:px-8">
-        <div className="flex flex-col md:flex-row items-center justify-between gap-6">
+        <div className="flex flex-col items-center gap-6">
           <Link to="/" className="flex items-center gap-2">
             <Shield className="h-5 w-5 text-primary" />
             <span className="text-sm font-bold tracking-tight text-foreground">
@@ -14,11 +14,10 @@ const Footer = () => {
             </span>
           </Link>
 
-          <div className="flex flex-wrap items-center justify-center gap-6 text-xs text-muted-foreground">
+          <div className="flex flex-wrap items-center justify-center gap-8 text-xs text-muted-foreground">
             <Link to="/privacy" className="hover:text-foreground transition-colors">Privacy Policy</Link>
             <Link to="/terms" className="hover:text-foreground transition-colors">Terms of Service</Link>
             <Link to="/disclosure" className="hover:text-foreground transition-colors">Responsible Disclosure</Link>
-            <Link to="/careers" className="hover:text-foreground transition-colors">Careers</Link>
           </div>
         </div>
 
