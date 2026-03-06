@@ -71,19 +71,6 @@ const Navbar = () => {
             )
           )}
 
-          {/* Legal dropdown */}
-          <DropdownMenu>
-            <DropdownMenuTrigger className="flex items-center gap-1 text-sm font-medium text-muted-foreground hover:text-foreground transition-colors outline-none">
-              Legal <ChevronDown className="h-3.5 w-3.5" />
-            </DropdownMenuTrigger>
-            <DropdownMenuContent align="end">
-              {legalLinks.map((link) => (
-                <DropdownMenuItem key={link.href} asChild>
-                  <Link to={link.href}>{link.label}</Link>
-                </DropdownMenuItem>
-              ))}
-            </DropdownMenuContent>
-          </DropdownMenu>
         </nav>
 
         <div className="hidden lg:block">
