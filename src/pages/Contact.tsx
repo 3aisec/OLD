@@ -25,20 +25,46 @@ const subjects = [
 ];
 
 const Contact = () => {
-  const { toast } = useToast();
+  const navigate = useNavigate();
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [error, setError] = useState<string | null>(null);
+  const [subject, setSubject] = useState("");
 
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setIsSubmitting(true);
-    setTimeout(() => {
+    setError(null);
+
+    const form = e.target as HTMLFormElement;
+    const formData = new FormData(form);
+
+    const payload = {
+      name: formData.get("name") as string,
+      email: formData.get("email") as string,
+      organization: formData.get("organization") as string,
+      subject,
+      message: formData.get("message") as string,
+      sourceUrl: window.location.href,
+    };
+
+    try {
+      const { data, error: fnError } = await supabase.functions.invoke(
+        "send-contact-email",
+        { body: payload }
+      );
+
+      if (fnError) throw fnError;
+      if (data?.error) throw new Error(data.error);
+
+      navigate("/thank-you?type=contact");
+    } catch (err) {
+      console.error("Contact form submission error:", err);
+      setError(
+        "Something went wrong. Please email us directly at contact@insight-weave.com."
+      );
+    } finally {
       setIsSubmitting(false);
-      toast({
-        title: "Message sent",
-        description: "Our team will respond within 24 hours.",
-      });
-      (e.target as HTMLFormElement).reset();
-    }, 1200);
+    }
   };
 
   return (
