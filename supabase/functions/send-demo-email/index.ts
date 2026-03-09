@@ -35,7 +35,6 @@ Deno.serve(async (req) => {
   }
 
   try {
-    // Get client IP from headers
     const clientIp =
       req.headers.get("x-forwarded-for")?.split(",")[0]?.trim() ||
       req.headers.get("x-real-ip") ||
@@ -91,19 +90,19 @@ IP: ${clientIp}
 Source Page: ${sourceUrl || "N/A"}`;
 
     const transporter = nodemailer.createTransport({
-      host: Deno.env.get("BREVO_SMTP_HOST"),
-      port: parseInt(Deno.env.get("BREVO_SMTP_PORT") || "587"),
+      host: Deno.env.get("GMAIL_SMTP_HOST"),
+      port: parseInt(Deno.env.get("GMAIL_SMTP_PORT") || "587"),
       secure: false,
       auth: {
-        user: Deno.env.get("BREVO_SMTP_USER"),
-        pass: Deno.env.get("BREVO_SMTP_PASS"),
+        user: Deno.env.get("GMAIL_SMTP_USER"),
+        pass: Deno.env.get("GMAIL_SMTP_PASS"),
       },
       tls: { rejectUnauthorized: false },
     });
 
     await transporter.sendMail({
-      from: Deno.env.get("BREVO_FROM"),
-      to: Deno.env.get("BREVO_TO"),
+      from: Deno.env.get("GMAIL_FROM"),
+      to: Deno.env.get("GMAIL_TO"),
       subject: `Insight Weave – New Demo Request from ${name.trim()}`,
       text: emailBody,
     });
