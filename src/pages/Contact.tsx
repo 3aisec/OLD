@@ -176,15 +176,21 @@ const Contact = () => {
                   />
                 </div>
 
-                <Button
-                  type="submit"
-                  size="lg"
-                  className="glow-md text-base font-semibold px-10 h-12"
-                  disabled={isSubmitting}
-                >
-                  {isSubmitting ? "Sending…" : "Send Message"}
-                  {!isSubmitting && <Send className="ml-2 h-4 w-4" />}
-                </Button>
+                <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+                  <Button
+                    type="submit"
+                    size="lg"
+                    className="glow-md text-base font-semibold px-10 h-12 w-full sm:w-auto"
+                    disabled={isSubmitting}
+                  >
+                    {isSubmitting ? "Sending…" : "Send Message"}
+                    {!isSubmitting && <Send className="ml-2 h-4 w-4" />}
+                  </Button>
+                  <p className="flex items-center gap-2 text-xs text-muted-foreground">
+                    <Lock className="h-3.5 w-3.5" />
+                    Your data is encrypted end-to-end and never shared
+                  </p>
+                </div>
               </form>
             </div>
 
