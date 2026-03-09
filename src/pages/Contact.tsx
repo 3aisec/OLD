@@ -11,10 +11,10 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select";
-import { Shield, ArrowRight, Mail, Phone, MapPin, Clock, Send } from "lucide-react";
+import { Shield, ArrowRight, Mail, Phone, MapPin, Clock, Send, AlertCircle, Lock } from "lucide-react";
 import zurichMap from "@/assets/zurich-map.png";
-import { useToast } from "@/hooks/use-toast";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+import { supabase } from "@/integrations/supabase/client";
 
 const subjects = [
   "Demo Request",
