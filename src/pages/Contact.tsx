@@ -125,6 +125,14 @@ const Contact = () => {
             {/* Left – Form (3/5 = 60%) */}
             <div className="lg:col-span-3 rounded-xl border border-border bg-card p-6 sm:p-10 shadow-sm">
               <h2 className="text-xl font-bold text-foreground mb-6">Send Us a Message</h2>
+
+              {error && (
+                <div className="mb-6 flex items-start gap-3 rounded-lg border border-destructive/30 bg-destructive/5 p-4">
+                  <AlertCircle className="h-5 w-5 text-destructive mt-0.5 shrink-0" />
+                  <p className="text-sm text-destructive">{error}</p>
+                </div>
+              )}
+
               <form onSubmit={handleSubmit} className="space-y-5">
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
                   <div className="space-y-2">
