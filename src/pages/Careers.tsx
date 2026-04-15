@@ -9,7 +9,7 @@ const openings = [
   {
     title: "Threat Intelligence Analyst",
     type: "Full-time",
-    location: "Zürich / Remote",
+    location: "Bengaluru / Remote",
     description:
       "Analyze dark web activity, track threat actors, and produce actionable intelligence reports for law enforcement and enterprise clients.",
     tags: ["OSINT", "Dark Web", "Threat Hunting"],
@@ -17,7 +17,7 @@ const openings = [
   {
     title: "CDR/IPDR Engineer",
     type: "Full-time",
-    location: "Zürich",
+    location: "Bengaluru",
     description:
       "Build and optimize large-scale CDR/IPDR analytics pipelines, design correlation algorithms, and develop real-time anomaly detection systems.",
     tags: ["Big Data", "Python", "Telecom"],
@@ -25,7 +25,7 @@ const openings = [
   {
     title: "Red Team Operator",
     type: "Full-time / Contract",
-    location: "Zürich / Remote",
+    location: "Bengaluru / Remote",
     description:
       "Conduct advanced penetration testing, adversary simulations, and red team engagements for critical infrastructure and government clients.",
     tags: ["Pentesting", "C2 Frameworks", "Active Directory"],
@@ -33,7 +33,7 @@ const openings = [
   {
     title: "vCISO Consultant",
     type: "Full-time",
-    location: "Zürich / Remote",
+    location: "Bengaluru / Remote",
     description:
       "Provide strategic cybersecurity leadership to clients, develop security programs, and ensure regulatory compliance across multiple frameworks.",
     tags: ["GRC", "ISO 27001", "Risk Management"],
@@ -58,7 +58,7 @@ const Careers = () => {
       <section className="py-16">
         <div className="container mx-auto px-4 lg:px-8 max-w-4xl space-y-6">
           <div className="flex items-center gap-4 mb-8 text-sm text-muted-foreground justify-center">
-            <span className="flex items-center gap-1"><MapPin className="h-4 w-4" /> Zürich, Switzerland</span>
+            <span className="flex items-center gap-1"><MapPin className="h-4 w-4" /> Bengaluru, India</span>
             <span className="flex items-center gap-1"><Wifi className="h-4 w-4" /> Remote-friendly</span>
           </div>
 
@@ -93,8 +93,8 @@ const Careers = () => {
                 Send your CV and a brief cover letter to our recruiting team. Include relevant certifications and any published research.
               </p>
               <Button asChild className="glow-sm">
-                <a href="mailto:info@insight-weave.com">
-                  info@insight-weave.com <ArrowRight className="ml-2 h-4 w-4" />
+                <a href="mailto:temp_info@trinetra-ai.com">
+                  temp_info@trinetra-ai.com <ArrowRight className="ml-2 h-4 w-4" />
                 </a>
               </Button>
             </CardContent>
