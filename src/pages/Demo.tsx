@@ -121,7 +121,7 @@ const Demo = () => {
           <Link to="/" className="flex items-center gap-2">
             <Shield className="h-7 w-7 text-primary" />
             <span className="text-lg font-bold tracking-tight text-foreground">
-              AEGIS<span className="text-primary">CYBER</span>
+              TRINETRA
             </span>
           </Link>
           <Button size="sm" variant="outline" asChild>
@@ -313,7 +313,7 @@ const Demo = () => {
       {/* Footer */}
       <footer className="border-t border-border py-8">
         <div className="container mx-auto px-4 lg:px-8 text-center text-xs text-muted-foreground">
-          © {new Date().getFullYear()} AEGISCYBER. All rights reserved.
+          © {new Date().getFullYear()} TRINETRA. All rights reserved.
         </div>
       </footer>
     </div>
