@@ -19,19 +19,19 @@ const sections = [
     icon: Lock,
     title: "CDR/IPDR Data Handling",
     content:
-      "Call Detail Records (CDR) and IP Detail Records (IPDR) are among the most sensitive datasets we process. All CDR/IPDR data is encrypted at rest (AES-256) and in transit (TLS 1.3). Access is restricted on a strict need-to-know basis with full audit logging. Data is processed in isolated, air-gapped environments where required. Retention periods are defined by client contracts and applicable law. Data destruction follows DoD 5220.22-M standards.",
+      "Call Detail Records (CDR) and IP Detail Records (IPDR) are among the most sensitive datasets we process. All CDR/IPDR data is encrypted at rest (AES-256) and in transit (TLS 1.3). Access is restricted on a strict need-to-know basis with full audit logging. Data is processed in isolated, air-gapped environments where required. Retention periods are defined by client contracts and applicable Indian law, including the Information Technology Act, 2000 and the Digital Personal Data Protection Act, 2023 (DPDPA). Data destruction follows DoD 5220.22-M standards.",
   },
   {
     icon: Globe,
-    title: "GDPR & Swiss Data Protection Compliance",
+    title: "Indian Data Protection Compliance",
     content:
-      "AegisCyber fully complies with the EU General Data Protection Regulation (GDPR) and the Swiss Federal Act on Data Protection (FADP/nDSG). You have the right to access, rectify, delete, or port your personal data. You may withdraw consent at any time. We conduct Data Protection Impact Assessments (DPIAs) for high-risk processing activities. Cross-border transfers comply with Swiss-EU adequacy decisions and Standard Contractual Clauses (SCCs).",
+      "AegisCyber fully complies with the Digital Personal Data Protection Act, 2023 (DPDPA), the Information Technology Act, 2000, and the Information Technology (Reasonable Security Practices and Procedures and Sensitive Personal Data or Information) Rules, 2011. You have the right to access, correct, and erase your personal data. You may withdraw consent at any time by contacting us, and such withdrawal shall be as easy as granting consent. We process personal data only for lawful purposes with valid consent or other legitimate grounds as specified under the DPDPA. Cross-border data transfers are permitted only to countries and territories notified by the Central Government of India. We appoint a Consent Manager as required under the DPDPA and conduct Data Protection Impact Assessments for significant data processing activities. In the event of a data breach, we notify the Data Protection Board of India and affected Data Principals without unreasonable delay, as mandated by law.",
   },
   {
     icon: Mail,
-    title: "Contact Our Data Protection Officer",
+    title: "Contact Our Grievance Officer",
     content:
-      "For any privacy-related inquiries, data subject access requests, or concerns, please contact our Data Protection Officer at dpo@insight-weave.com. We respond to all requests within 30 days as required by applicable regulations.",
+      "For any privacy-related inquiries, data access or correction requests, grievances, or concerns, please contact our Grievance Officer at dpo@insight-weave.com. We acknowledge all requests within 48 hours and resolve them within 30 days as required under the Information Technology (Intermediary Guidelines and Digital Media Ethics Code) Rules, 2021 and the DPDPA.",
   },
 ];
 
@@ -65,7 +65,7 @@ const Privacy = () => {
           ))}
 
           <div className="border-t border-border pt-8 text-sm text-muted-foreground text-center">
-            Last updated: March 2026
+            Last updated: April 2026
           </div>
         </div>
       </section>
