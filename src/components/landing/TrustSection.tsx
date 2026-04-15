@@ -35,7 +35,7 @@ const TrustSection = () => {
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
         >
-          <span className="text-xs font-semibold uppercase tracking-widest text-primary mb-4 block">
+          <span className="font-semibold uppercase tracking-widest text-primary mb-4 block text-xl">
             Trust
           </span>
           <h2 className="text-3xl lg:text-4xl font-bold tracking-tight">

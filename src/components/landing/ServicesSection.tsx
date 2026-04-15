@@ -44,17 +44,17 @@ const ServicesSection = () => {
     <section id="services" className="relative py-24 lg:py-32 bg-secondary/30">
       <div className="container mx-auto px-4 lg:px-8">
         <motion.div
-          className="text-center mb-16"
+          className="mb-16"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
         >
-          <span className="text-xs font-semibold uppercase tracking-widest text-primary mb-4 block">
+          <span className="font-semibold uppercase tracking-widest text-primary mb-4 block text-xl">
             Capabilities
           </span>
           <h2 className="text-3xl lg:text-4xl font-bold tracking-tight">
-            Full-Spectrum Cyber Services
+            Full-Spectrum Cyber Security
           </h2>
         </motion.div>
 

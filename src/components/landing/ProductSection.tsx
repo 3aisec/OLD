@@ -21,16 +21,14 @@ const ProductSection = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            <span className="text-xs font-semibold uppercase tracking-widest text-primary mb-4 block">
-              Core Platform
+            <span className="uppercase tracking-widest text-primary mb-4 block text-5xl font-sans font-extrabold">
+              GANDIV
             </span>
-            <h2 className="text-3xl lg:text-4xl font-bold tracking-tight mb-6">
-              CDR/IPDR Analytics Software
+            <h2 className="text-3xl lg:text-4xl tracking-tight mb-6 font-medium font-serif">
+              Precision Policing
             </h2>
             <p className="text-muted-foreground mb-10 leading-relaxed">
-              Purpose-built for telecom operators, law enforcement, and intelligence
-              agencies. Transform raw communications metadata into actionable
-              intelligence in minutes, not weeks.
+              Battle-proven CDR/IPDR analytics software purpose-built for law enforcement, intelligence agencies and telecom operators. Transform raw communications metadata into actionable intelligence in minutes, not weeks.
             </p>
 
             <div className="space-y-6">
