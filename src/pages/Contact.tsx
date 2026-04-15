@@ -224,7 +224,7 @@ const Contact = () => {
                     <MapPin className="h-5 w-5 text-primary mt-0.5 shrink-0" />
                     <div>
                       <p className="text-sm font-medium text-foreground">Location</p>
-                      <p className="text-sm text-muted-foreground">Switzerland</p>
+                      <p className="text-sm text-muted-foreground">Bengaluru</p>
                     </div>
                   </div>
 
@@ -246,7 +246,7 @@ const Contact = () => {
                   className="w-full h-56 object-cover"
                 />
                 <p className="text-center text-sm text-muted-foreground py-3">
-                  Based in Zürich, Switzerland
+                  Based in Bengaluru, India
                 </p>
               </div>
             </div>
