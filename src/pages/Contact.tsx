@@ -60,7 +60,7 @@ const Contact = () => {
     } catch (err) {
       console.error("Contact form submission error:", err);
       setError(
-        "Something went wrong. Please email us directly at contact@insight-weave.com."
+        "Something went wrong. Please email us directly at temp@trinetra-ai.com."
       );
     } finally {
       setIsSubmitting(false);
@@ -204,8 +204,8 @@ const Contact = () => {
                     <Mail className="h-5 w-5 text-primary mt-0.5 shrink-0" />
                     <div>
                       <p className="text-sm font-medium text-foreground">Email</p>
-                      <a href="mailto:contact@insight-weave.com" className="text-sm text-primary hover:underline">
-                        contact@insight-weave.com
+                      <a href="mailto:temp@trinetra-ai.com" className="text-sm text-primary hover:underline">
+                        temp@trinetra-ai.com
                       </a>
                     </div>
                   </div>
@@ -214,8 +214,8 @@ const Contact = () => {
                     <Phone className="h-5 w-5 text-primary mt-0.5 shrink-0" />
                     <div>
                       <p className="text-sm font-medium text-foreground">Phone</p>
-                      <a href="tel:+15551234567" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
-                        +1 (555) 123-4567
+                      <a href="tel:+911234567890" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
+                        +91 - 12345 67890
                       </a>
                     </div>
                   </div>
