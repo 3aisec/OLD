@@ -7,7 +7,7 @@ const sections = [
     icon: Scale,
     title: "1. Agreement to Terms",
     content:
-      'By accessing or using AegisCyber services, you agree to be bound by these Terms of Service. If you are entering into this agreement on behalf of an organization, you represent that you have authority to bind that entity. "Services" refers to all products, platforms, and consulting engagements provided by AegisCyber. These Terms are governed by and construed in accordance with the laws of the Republic of India, including the Indian Contract Act, 1872, the Information Technology Act, 2000, and the Digital Personal Data Protection Act, 2023.',
+      'By accessing or using Trinetra services, you agree to be bound by these Terms of Service. If you are entering into this agreement on behalf of an organization, you represent that you have authority to bind that entity. "Services" refers to all products, platforms, and consulting engagements provided by Trinetra. These Terms are governed by and construed in accordance with the laws of the Republic of India, including the Indian Contract Act, 1872, the Information Technology Act, 2000, and the Digital Personal Data Protection Act, 2023.',
   },
   {
     icon: ShieldCheck,
@@ -19,25 +19,25 @@ const sections = [
     icon: Server,
     title: "3. Data Security Obligations",
     content:
-      "Clients must maintain adequate security controls in compliance with the Information Technology (Reasonable Security Practices and Procedures and Sensitive Personal Data or Information) Rules, 2011 when handling data, reports, or intelligence products provided by AegisCyber. All penetration testing and red team engagements require signed Rules of Engagement (RoE) and authorized scope documentation. CDR/IPDR analytics outputs are classified and must be handled according to the agreed data classification framework and applicable CERT-In directives. Breach of data security obligations may result in immediate service termination.",
+      "Clients must maintain adequate security controls in compliance with the Information Technology (Reasonable Security Practices and Procedures and Sensitive Personal Data or Information) Rules, 2011 when handling data, reports, or intelligence products provided by Trinetra. All penetration testing and red team engagements require signed Rules of Engagement (RoE) and authorized scope documentation. CDR/IPDR analytics outputs are classified and must be handled according to the agreed data classification framework and applicable CERT-In directives. Breach of data security obligations may result in immediate service termination.",
   },
   {
     icon: FileWarning,
     title: "4. Limitation of Liability",
     content:
-      "AegisCyber provides cybersecurity intelligence and advisory services on a best-effort basis. We do not guarantee the detection of all threats or vulnerabilities. Our liability is limited to the fees paid for the specific engagement in question, to the extent permitted under the Indian Contract Act, 1872 and the Consumer Protection Act, 2019. We are not liable for damages arising from client failure to implement recommended security controls.",
+      "Trinetra provides cybersecurity intelligence and advisory services on a best-effort basis. We do not guarantee the detection of all threats or vulnerabilities. Our liability is limited to the fees paid for the specific engagement in question, to the extent permitted under the Indian Contract Act, 1872 and the Consumer Protection Act, 2019. We are not liable for damages arising from client failure to implement recommended security controls.",
   },
   {
     icon: AlertTriangle,
     title: "5. Service Modifications & Termination",
     content:
-      "AegisCyber reserves the right to modify, suspend, or discontinue services with reasonable notice. Either party may terminate the agreement with 30 days written notice. Classified or ongoing intelligence engagements have specific termination procedures outlined in individual contracts. Upon termination, all client data is securely destroyed per our data retention policy and in compliance with the Digital Personal Data Protection Act, 2023.",
+      "Trinetra reserves the right to modify, suspend, or discontinue services with reasonable notice. Either party may terminate the agreement with 30 days written notice. Classified or ongoing intelligence engagements have specific termination procedures outlined in individual contracts. Upon termination, all client data is securely destroyed per our data retention policy and in compliance with the Digital Personal Data Protection Act, 2023.",
   },
   {
     icon: Scale,
     title: "6. Dispute Resolution & Jurisdiction",
     content:
-      "Any disputes arising out of or in connection with these Terms shall first be attempted to be resolved through mediation. If mediation fails, disputes shall be subject to arbitration in accordance with the Arbitration and Conciliation Act, 1996, with the seat of arbitration in New Delhi, India. The courts of New Delhi shall have exclusive jurisdiction over any matters not subject to arbitration.",
+      "Any disputes arising out of or in connection with these Terms shall first be attempted to be resolved through mediation. If mediation fails, disputes shall be subject to arbitration in accordance with the Arbitration and Conciliation Act, 1996, with the seat of arbitration in Bengaluru, India. The courts of Bengaluru shall have exclusive jurisdiction over any matters not subject to arbitration.",
   },
 ];
 
@@ -51,7 +51,7 @@ const Terms = () => {
           <Scale className="h-12 w-12 text-primary mx-auto mb-6" />
           <h1 className="text-4xl md:text-5xl font-bold text-foreground mb-4">Terms of Service</h1>
           <p className="text-lg text-muted-foreground">
-            Governing the use of AegisCyber intelligence and cybersecurity services.
+            Governing the use of Trinetra intelligence and cybersecurity services.
           </p>
         </div>
       </section>

@@ -46,7 +46,7 @@ const Navbar = () => {
         <Link to="/" className="flex items-center gap-2">
           <Shield className="h-7 w-7 text-primary" />
           <span className="text-lg font-bold tracking-tight text-foreground">
-            AEGIS<span className="text-primary">CYBER</span>
+            TRI<span className="text-primary">NETRA</span>
           </span>
         </Link>
 
