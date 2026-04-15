@@ -31,7 +31,7 @@ const sections = [
     icon: Mail,
     title: "Contact Our Grievance Officer",
     content:
-      "For any privacy-related inquiries, data access or correction requests, grievances, or concerns, please contact our Grievance Officer at dpo@insight-weave.com. We acknowledge all requests within 48 hours and resolve them within 30 days as required under the Information Technology (Intermediary Guidelines and Digital Media Ethics Code) Rules, 2021 and the DPDPA.",
+      "For any privacy-related inquiries, data access or correction requests, grievances, or concerns, please contact our Grievance Officer at temp_dpo@trinetra-ai.com. We acknowledge all requests within 48 hours and resolve them within 30 days as required under the Information Technology (Intermediary Guidelines and Digital Media Ethics Code) Rules, 2021 and the DPDPA.",
   },
 ];
 
