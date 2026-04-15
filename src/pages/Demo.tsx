@@ -11,7 +11,7 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select";
-import { Shield, ArrowRight, Lock, Monitor, Globe, ShieldCheck, Award, Fingerprint, AlertCircle } from "lucide-react";
+import { ArrowRight, Lock, Monitor, Globe, ShieldCheck, Award, Fingerprint, AlertCircle } from "lucide-react";
 import { Link, useNavigate } from "react-router-dom";
 import { supabase } from "@/integrations/supabase/client";
 
@@ -118,11 +118,8 @@ const Demo = () => {
       {/* Navbar */}
       <header className="fixed top-0 left-0 right-0 z-50 bg-background/90 backdrop-blur-xl border-b border-border">
         <div className="container mx-auto flex h-16 items-center justify-between px-4 lg:px-8">
-          <Link to="/" className="flex items-center gap-2">
-            <Shield className="h-7 w-7 text-primary" />
-            <span className="text-lg font-bold tracking-tight text-foreground">
-              TRINETRA
-            </span>
+          <Link to="/">
+            <img src="/images/trinetra-logo.png" alt="Trinetra" className="h-8" />
           </Link>
           <Button size="sm" variant="outline" asChild>
             <Link to="/">← Back to Home</Link>
