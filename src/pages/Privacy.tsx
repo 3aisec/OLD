@@ -1,6 +1,6 @@
 import Navbar from "@/components/landing/Navbar";
 import Footer from "@/components/landing/Footer";
-import { Lock, Globe, Mail, FileText } from "lucide-react";
+import { Shield, Lock, Globe, Mail, FileText } from "lucide-react";
 
 const sections = [
   {
