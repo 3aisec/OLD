@@ -10,7 +10,7 @@ const Footer = () => {
           <Link to="/" className="flex items-center gap-2">
             <Shield className="h-5 w-5 text-primary" />
             <span className="text-sm font-bold tracking-tight text-foreground">
-              AEGIS<span className="text-primary">CYBER</span>
+              TRI<span className="text-primary">NETRA</span>
             </span>
           </Link>
 
@@ -24,7 +24,7 @@ const Footer = () => {
         <Separator className="my-8" />
 
         <p className="text-center text-xs text-muted-foreground/60">
-          © {new Date().getFullYear()} AegisCyber. All rights reserved. Classified engagements handled under appropriate national frameworks.
+          © {new Date().getFullYear()} Trinetra. All rights reserved. Classified engagements handled under appropriate national frameworks.
         </p>
       </div>
     </footer>
