@@ -7,31 +7,37 @@ const sections = [
     icon: Scale,
     title: "1. Agreement to Terms",
     content:
-      'By accessing or using AegisCyber services, you agree to be bound by these Terms of Service. If you are entering into this agreement on behalf of an organization, you represent that you have authority to bind that entity. "Services" refers to all products, platforms, and consulting engagements provided by AegisCyber.',
+      'By accessing or using AegisCyber services, you agree to be bound by these Terms of Service. If you are entering into this agreement on behalf of an organization, you represent that you have authority to bind that entity. "Services" refers to all products, platforms, and consulting engagements provided by AegisCyber. These Terms are governed by and construed in accordance with the laws of the Republic of India, including the Indian Contract Act, 1872, the Information Technology Act, 2000, and the Digital Personal Data Protection Act, 2023.',
   },
   {
     icon: ShieldCheck,
     title: "2. Acceptable Use Policy",
     content:
-      "You agree to use our services only for lawful purposes and in accordance with applicable local, national, and international laws. Prohibited activities include: unauthorized access to systems or networks, distribution of malware or exploit code outside authorized engagements, using our intelligence products for harassment or surveillance outside legal frameworks, misrepresenting your identity or authority to access classified services, and sharing confidential reports or findings with unauthorized parties.",
+      "You agree to use our services only for lawful purposes and in accordance with applicable Indian laws, including the Information Technology Act, 2000 and the Indian Penal Code / Bharatiya Nyaya Sanhita, 2023. Prohibited activities include: unauthorized access to systems or networks (punishable under Sections 43 and 66 of the IT Act), distribution of malware or exploit code outside authorized engagements, using our intelligence products for harassment or surveillance outside legal frameworks, misrepresenting your identity or authority to access classified services, and sharing confidential reports or findings with unauthorized parties.",
   },
   {
     icon: Server,
     title: "3. Data Security Obligations",
     content:
-      "Clients must maintain adequate security controls when handling data, reports, or intelligence products provided by AegisCyber. All penetration testing and red team engagements require signed Rules of Engagement (RoE) and authorized scope documentation. CDR/IPDR analytics outputs are classified and must be handled according to the agreed data classification framework. Breach of data security obligations may result in immediate service termination.",
+      "Clients must maintain adequate security controls in compliance with the Information Technology (Reasonable Security Practices and Procedures and Sensitive Personal Data or Information) Rules, 2011 when handling data, reports, or intelligence products provided by AegisCyber. All penetration testing and red team engagements require signed Rules of Engagement (RoE) and authorized scope documentation. CDR/IPDR analytics outputs are classified and must be handled according to the agreed data classification framework and applicable CERT-In directives. Breach of data security obligations may result in immediate service termination.",
   },
   {
     icon: FileWarning,
     title: "4. Limitation of Liability",
     content:
-      "AegisCyber provides cybersecurity intelligence and advisory services on a best-effort basis. We do not guarantee the detection of all threats or vulnerabilities. Our liability is limited to the fees paid for the specific engagement in question. We are not liable for damages arising from client failure to implement recommended security controls.",
+      "AegisCyber provides cybersecurity intelligence and advisory services on a best-effort basis. We do not guarantee the detection of all threats or vulnerabilities. Our liability is limited to the fees paid for the specific engagement in question, to the extent permitted under the Indian Contract Act, 1872 and the Consumer Protection Act, 2019. We are not liable for damages arising from client failure to implement recommended security controls.",
   },
   {
     icon: AlertTriangle,
     title: "5. Service Modifications & Termination",
     content:
-      "AegisCyber reserves the right to modify, suspend, or discontinue services with reasonable notice. Either party may terminate the agreement with 30 days written notice. Classified or ongoing intelligence engagements have specific termination procedures outlined in individual contracts. Upon termination, all client data is securely destroyed per our data retention policy.",
+      "AegisCyber reserves the right to modify, suspend, or discontinue services with reasonable notice. Either party may terminate the agreement with 30 days written notice. Classified or ongoing intelligence engagements have specific termination procedures outlined in individual contracts. Upon termination, all client data is securely destroyed per our data retention policy and in compliance with the Digital Personal Data Protection Act, 2023.",
+  },
+  {
+    icon: Scale,
+    title: "6. Dispute Resolution & Jurisdiction",
+    content:
+      "Any disputes arising out of or in connection with these Terms shall first be attempted to be resolved through mediation. If mediation fails, disputes shall be subject to arbitration in accordance with the Arbitration and Conciliation Act, 1996, with the seat of arbitration in New Delhi, India. The courts of New Delhi shall have exclusive jurisdiction over any matters not subject to arbitration.",
   },
 ];
 
@@ -63,7 +69,7 @@ const Terms = () => {
           ))}
 
           <div className="border-t border-border pt-8 text-sm text-muted-foreground text-center">
-            These terms are governed by the laws of Switzerland. Last updated: March 2026.
+            These terms are governed by the laws of the Republic of India. Last updated: April 2026.
           </div>
         </div>
       </section>
