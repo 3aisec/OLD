@@ -11,7 +11,7 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select";
-import { ArrowRight, Mail, Phone, MapPin, Clock, Send, AlertCircle, Lock } from "lucide-react";
+import { Shield, ArrowRight, Mail, Phone, MapPin, Clock, Send, AlertCircle, Lock } from "lucide-react";
 import zurichMap from "@/assets/zurich-map.png";
 import { Link, useNavigate } from "react-router-dom";
 import { supabase } from "@/integrations/supabase/client";
@@ -72,8 +72,11 @@ const Contact = () => {
       {/* Navbar */}
       <header className="fixed top-0 left-0 right-0 z-50 bg-background/90 backdrop-blur-xl border-b border-border">
         <div className="container mx-auto flex h-16 items-center justify-between px-4 lg:px-8">
-          <Link to="/">
-            <img src="/images/trinetra-logo.png" alt="Trinetra" className="h-8" />
+          <Link to="/" className="flex items-center gap-2">
+            <Shield className="h-7 w-7 text-primary" />
+            <span className="text-lg font-bold tracking-tight text-foreground">
+              AEGIS<span className="text-primary">CYBER</span>
+            </span>
           </Link>
           <Button size="sm" variant="outline" asChild>
             <Link to="/">← Back to Home</Link>
@@ -269,7 +272,7 @@ const Contact = () => {
       {/* Footer */}
       <footer className="border-t border-border py-8">
         <div className="container mx-auto px-4 lg:px-8 text-center text-xs text-muted-foreground">
-          © {new Date().getFullYear()} TRINETRA. All rights reserved.
+          © {new Date().getFullYear()} AEGISCYBER. All rights reserved.
         </div>
       </footer>
     </div>

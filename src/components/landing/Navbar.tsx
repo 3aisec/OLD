@@ -7,7 +7,7 @@ import {
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
-import { Menu, ChevronDown } from "lucide-react";
+import { Menu, Shield, ChevronDown } from "lucide-react";
 import { Link } from "react-router-dom";
 
 const navLinks = [
@@ -43,8 +43,11 @@ const Navbar = () => {
       }`}
     >
       <div className="container mx-auto flex h-16 items-center justify-between px-4 lg:px-8">
-        <Link to="/">
-          <img src="/images/trinetra-logo.png" alt="Trinetra" className="h-8" />
+        <Link to="/" className="flex items-center gap-2">
+          <Shield className="h-7 w-7 text-primary" />
+          <span className="text-lg font-bold tracking-tight text-foreground">
+            TRI<span className="text-primary">NETRA</span>
+          </span>
         </Link>
 
         <nav className="hidden lg:flex items-center gap-5">
