@@ -1,6 +1,6 @@
 import Navbar from "@/components/landing/Navbar";
 import Footer from "@/components/landing/Footer";
-import { Shield, Lock, Globe, Mail, FileText } from "lucide-react";
+import { Lock, Globe, Mail, FileText } from "lucide-react";
 
 const sections = [
   {
@@ -43,7 +43,7 @@ const Privacy = () => {
       {/* Hero */}
       <section className="pt-28 pb-16 bg-gradient-to-b from-primary/5 to-background">
         <div className="container mx-auto px-4 lg:px-8 text-center max-w-3xl">
-          <Shield className="h-12 w-12 text-primary mx-auto mb-6" />
+          <img src="/images/trinetra-logo.png" alt="Trinetra" className="h-12 mx-auto mb-6" />
           <h1 className="text-4xl md:text-5xl font-bold text-foreground mb-4">Privacy Policy</h1>
           <p className="text-lg text-muted-foreground">
             We protect your data like intelligence agencies protect sources.
