@@ -272,7 +272,7 @@ const Contact = () => {
       {/* Footer */}
       <footer className="border-t border-border py-8">
         <div className="container mx-auto px-4 lg:px-8 text-center text-xs text-muted-foreground">
-          © {new Date().getFullYear()} TRINETA. All rights reserved.
+          © {new Date().getFullYear()} TRINETRA. All rights reserved.
         </div>
       </footer>
     </div>
