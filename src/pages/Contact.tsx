@@ -60,7 +60,7 @@ const Contact = () => {
     } catch (err) {
       console.error("Contact form submission error:", err);
       setError(
-        "Something went wrong. Please email us directly at temp@trinetra-ai.com."
+        "Something went wrong. Please email us directly at temp@temp.temp."
       );
     } finally {
       setIsSubmitting(false);
@@ -75,7 +75,7 @@ const Contact = () => {
           <Link to="/" className="flex items-center gap-2">
             <Shield className="h-7 w-7 text-primary" />
             <span className="text-lg font-bold tracking-tight text-foreground">
-              AEGIS<span className="text-primary">CYBER</span>
+              TRINETRA
             </span>
           </Link>
           <Button size="sm" variant="outline" asChild>
@@ -204,8 +204,8 @@ const Contact = () => {
                     <Mail className="h-5 w-5 text-primary mt-0.5 shrink-0" />
                     <div>
                       <p className="text-sm font-medium text-foreground">Email</p>
-                      <a href="mailto:temp@trinetra-ai.com" className="text-sm text-primary hover:underline">
-                        temp@trinetra-ai.com
+                      <a href="mailto:temp@temp.temp" className="text-sm text-primary hover:underline">
+                        temp@temp.temp
                       </a>
                     </div>
                   </div>
@@ -272,7 +272,7 @@ const Contact = () => {
       {/* Footer */}
       <footer className="border-t border-border py-8">
         <div className="container mx-auto px-4 lg:px-8 text-center text-xs text-muted-foreground">
-          © {new Date().getFullYear()} AEGISCYBER. All rights reserved.
+          © {new Date().getFullYear()} TRINETRA. All rights reserved.
         </div>
       </footer>
     </div>
