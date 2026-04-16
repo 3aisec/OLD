@@ -16,7 +16,7 @@ const ThankYou = () => {
           <Link to="/" className="flex items-center gap-2">
             <img src={trinetraLogo} alt="Trinetra" className="h-7 w-auto" />
             <span className="text-lg font-bold tracking-tight text-foreground">
-              AEGIS<span className="text-primary">CYBER</span>
+              TRI<span className="text-primary">NETRA</span>
             </span>
           </Link>
           <Button size="sm" variant="outline" asChild>
