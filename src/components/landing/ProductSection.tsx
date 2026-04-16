@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { Network, MapPin, Brain, Briefcase, Plug } from "lucide-react";
+import bowAndArrow from "@/assets/bow-and-arrow-combo.svg";
 
 const features = [
   { icon: Network, title: "Link Analysis", desc: "Visualize complex communication networks with automatic entity resolution and relationship mapping." },
@@ -62,18 +63,9 @@ const ProductSection = () => {
           >
             <div className="aspect-[4/3] rounded-xl border border-border bg-card overflow-hidden relative">
               <div className="absolute inset-0 grid-pattern opacity-30" />
-              <div className="absolute inset-0 flex items-center justify-center">
-                <div className="text-center p-8">
-                  <Network className="h-16 w-16 text-primary/30 mx-auto mb-4" />
-                  <p className="text-sm text-muted-foreground font-medium">
-                    Product Dashboard Preview
-                  </p>
-                  <p className="text-xs text-muted-foreground/60 mt-1">
-                    Replace with actual screenshot
-                  </p>
-                </div>
+              <div className="absolute inset-0 flex items-center justify-center p-10">
+                <img src={bowAndArrow} alt="Product illustration" className="w-48 h-48 object-contain" />
               </div>
-              {/* Decorative glow */}
               <div className="absolute -bottom-8 -right-8 w-40 h-40 bg-primary/10 rounded-full blur-[60px]" />
             </div>
           </motion.div>
