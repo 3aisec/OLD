@@ -11,7 +11,8 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select";
-import { Shield, ArrowRight, Lock, Monitor, Globe, ShieldCheck, Award, Fingerprint, AlertCircle } from "lucide-react";
+import { ArrowRight, Lock, Monitor, Globe, ShieldCheck, Award, Fingerprint, AlertCircle } from "lucide-react";
+import trinetraLogo from "@/assets/trinetra-logo.png";
 import { Link, useNavigate } from "react-router-dom";
 import { supabase } from "@/integrations/supabase/client";
 

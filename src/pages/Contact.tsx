@@ -11,7 +11,8 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select";
-import { Shield, ArrowRight, Mail, Phone, MapPin, Clock, Send, AlertCircle, Lock } from "lucide-react";
+import { ArrowRight, Mail, Phone, MapPin, Clock, Send, AlertCircle, Lock } from "lucide-react";
+import trinetraLogo from "@/assets/trinetra-logo.png";
 import zurichMap from "@/assets/zurich-map.png";
 import { Link, useNavigate } from "react-router-dom";
 import { supabase } from "@/integrations/supabase/client";

@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
-import { Shield, CheckCircle, Mail } from "lucide-react";
+import { CheckCircle, Mail } from "lucide-react";
+import trinetraLogo from "@/assets/trinetra-logo.png";
 import { Link, useSearchParams } from "react-router-dom";
 
 const ThankYou = () => {
