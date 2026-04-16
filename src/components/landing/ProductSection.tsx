@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { Network, MapPin, Brain, Briefcase, Plug } from "lucide-react";
+import bowAndArrow from "@/assets/bow-and-arrow-combo.svg";
 
 const features = [
   { icon: Network, title: "Link Analysis", desc: "Visualize complex communication networks with automatic entity resolution and relationship mapping." },
