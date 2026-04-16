@@ -8,7 +8,7 @@ const Footer = () => {
       <div className="container mx-auto px-4 lg:px-8">
         <div className="flex flex-col items-center gap-6">
           <Link to="/" className="flex items-center gap-2">
-            <Shield className="h-5 w-5 text-primary" />
+            <img src={trinetraLogo} alt="Trinetra logo" className="h-5 w-5 object-contain" />
             <span className="text-sm font-bold tracking-tight text-foreground">
               TRI<span className="text-primary">NETRA</span>
             </span>

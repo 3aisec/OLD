@@ -44,7 +44,7 @@ const Navbar = () => {
     >
       <div className="container mx-auto flex h-16 items-center justify-between px-4 lg:px-8">
         <Link to="/" className="flex items-center gap-2">
-          <Shield className="h-7 w-7 text-primary" />
+          <img src={trinetraLogo} alt="Trinetra logo" className="h-7 w-7 object-contain" />
           <span className="text-lg font-bold tracking-tight text-foreground">
             TRI<span className="text-primary">NETRA</span>
           </span>
