@@ -1,4 +1,4 @@
-import { Shield } from "lucide-react";
+import trinetraLogo from "@/assets/trinetra-logo.png";
 import { Separator } from "@/components/ui/separator";
 import { Link } from "react-router-dom";
 

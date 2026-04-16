@@ -7,7 +7,8 @@ import {
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
-import { Menu, Shield, ChevronDown } from "lucide-react";
+import { Menu, ChevronDown } from "lucide-react";
+import trinetraLogo from "@/assets/trinetra-logo.png";
 import { Link } from "react-router-dom";
 
 const navLinks = [
