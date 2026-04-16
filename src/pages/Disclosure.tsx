@@ -109,10 +109,10 @@ const Disclosure = () => {
                 Send your findings encrypted via PGP to our security team. Include proof of concept, impact assessment, and reproduction steps.
               </p>
               <a
-                href="mailto:temp.security@trinetra-ai.com"
+                href="mailto:temp.security@temp.temp"
                 className="inline-block mt-2 text-primary font-semibold hover:underline"
               >
-                temp.security@trinetra-ai.com
+                temp.security@temp.temp
               </a>
             </CardContent>
           </Card>
