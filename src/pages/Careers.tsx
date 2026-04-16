@@ -93,8 +93,8 @@ const Careers = () => {
                 Send your CV and a brief cover letter to our recruiting team. Include relevant certifications and any published research.
               </p>
               <Button asChild className="glow-sm">
-                <a href="mailto:temp_info@trinetra-ai.com">
-                  temp_info@trinetra-ai.com <ArrowRight className="ml-2 h-4 w-4" />
+                <a href="mailto:temp_info@temp.temp">
+                  temp_info@temp.temp <ArrowRight className="ml-2 h-4 w-4" />
                 </a>
               </Button>
             </CardContent>
