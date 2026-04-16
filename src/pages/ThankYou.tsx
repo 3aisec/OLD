@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
-import { Shield, CheckCircle, Mail } from "lucide-react";
+import { CheckCircle, Mail } from "lucide-react";
+import trinetraLogo from "@/assets/trinetra-logo.png";
 import { Link, useSearchParams } from "react-router-dom";
 
 const ThankYou = () => {
@@ -13,9 +14,9 @@ const ThankYou = () => {
       <header className="fixed top-0 left-0 right-0 z-50 bg-background/90 backdrop-blur-xl border-b border-border">
         <div className="container mx-auto flex h-16 items-center justify-between px-4 lg:px-8">
           <Link to="/" className="flex items-center gap-2">
-            <Shield className="h-7 w-7 text-primary" />
+            <img src={trinetraLogo} alt="Trinetra" className="h-7 w-auto" />
             <span className="text-lg font-bold tracking-tight text-foreground">
-              AEGIS<span className="text-primary">CYBER</span>
+              TRI<span className="text-primary">NETRA</span>
             </span>
           </Link>
           <Button size="sm" variant="outline" asChild>
