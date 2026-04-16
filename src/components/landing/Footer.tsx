@@ -1,4 +1,4 @@
-import trinetraLogo from "@/assets/trinetra-logo.png";
+import { Shield } from "lucide-react";
 import { Separator } from "@/components/ui/separator";
 import { Link } from "react-router-dom";
 
@@ -8,7 +8,7 @@ const Footer = () => {
       <div className="container mx-auto px-4 lg:px-8">
         <div className="flex flex-col items-center gap-6">
           <Link to="/" className="flex items-center gap-2">
-            <img src={trinetraLogo} alt="Trinetra logo" className="h-5 w-5 object-contain" />
+            <Shield className="h-5 w-5 text-primary" />
             <span className="text-sm font-bold tracking-tight text-foreground">
               TRI<span className="text-primary">NETRA</span>
             </span>

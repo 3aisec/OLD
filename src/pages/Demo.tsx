@@ -11,8 +11,7 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select";
-import { ArrowRight, Lock, Monitor, Globe, ShieldCheck, Award, Fingerprint, AlertCircle } from "lucide-react";
-import trinetraLogo from "@/assets/trinetra-logo.png";
+import { Shield, ArrowRight, Lock, Monitor, Globe, ShieldCheck, Award, Fingerprint, AlertCircle } from "lucide-react";
 import { Link, useNavigate } from "react-router-dom";
 import { supabase } from "@/integrations/supabase/client";
 
@@ -120,7 +119,7 @@ const Demo = () => {
       <header className="fixed top-0 left-0 right-0 z-50 bg-background/90 backdrop-blur-xl border-b border-border">
         <div className="container mx-auto flex h-16 items-center justify-between px-4 lg:px-8">
           <Link to="/" className="flex items-center gap-2">
-            <img src={trinetraLogo} alt="Trinetra logo" className="h-7 w-7 object-contain" />
+            <Shield className="h-7 w-7 text-primary" />
             <span className="text-lg font-bold tracking-tight text-foreground">
               TRI<span className="text-primary">NETRA</span>
             </span>
