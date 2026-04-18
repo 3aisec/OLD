@@ -4,13 +4,13 @@ import { Quote } from "lucide-react";
 const testimonials = [
   {
     quote: "Their CDR analytics platform cut our investigation timelines from weeks to hours. The behavioral anomaly detection alone has generated dozens of actionable leads.",
-    role: "Head of Cyber Investigations",
-    org: "National Law Enforcement Agency",
+    role: "Head, Cyber Cell",
+    org: "Police Special Unit",
   },
   {
     quote: "We needed a partner who understood both the technical and operational realities of counter-terrorism intelligence. They delivered on both.",
     role: "Deputy Director, Intelligence Division",
-    org: "Government Security Service",
+    org: "Government Security Agency",
   },
   {
     quote: "The red team engagement uncovered critical vulnerabilities in our SCADA environment that three previous vendors missed entirely.",
@@ -20,8 +20,8 @@ const testimonials = [
 ];
 
 const certifications = [
-  "ISO 27001", "SOC 2 Type II", "CREST", "CHECK", "CBEST",
-  "NATO Cleared", "Cyber Essentials Plus",
+  "CISSP", "CISA", "CISM", "CRISC", "OSCP",
+  "CRTE", "ISO 27001 LA",
 ];
 
 const TrustSection = () => {

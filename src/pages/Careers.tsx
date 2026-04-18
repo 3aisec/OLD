@@ -36,7 +36,7 @@ const openings = [
     location: "Bengaluru / Remote",
     description:
       "Provide strategic cybersecurity leadership to clients, develop security programs, and ensure regulatory compliance across multiple frameworks.",
-    tags: ["GRC", "ISO 27001", "Risk Management"],
+    tags: ["GRC", "CISSP", "Risk Management"],
   },
 ];
 

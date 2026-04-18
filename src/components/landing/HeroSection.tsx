@@ -4,11 +4,11 @@ import { ArrowRight, Download, ShieldCheck, Award, Lock, Globe, Fingerprint } fr
 import { Link } from "react-router-dom";
 
 const trustBadges = [
-  { icon: ShieldCheck, label: "ISO 27001" },
-  { icon: Award, label: "SOC 2 Type II" },
-  { icon: Lock, label: "NATO Cleared" },
-  { icon: Globe, label: "INTERPOL Partner" },
-  { icon: Fingerprint, label: "CREST Certified" },
+  { icon: ShieldCheck, label: "CDR / IPDR" },
+  { icon: Award, label: "ANALYTICS" },
+  { icon: Lock, label: "INFOSEC" },
+  { icon: Globe, label: "CYBERINT" },
+  { icon: Fingerprint, label: "LAW ENFORCEMENT PARTNER" },
 ];
 
 const HeroSection = () => {
@@ -38,8 +38,8 @@ const HeroSection = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.1 }}
           >
-            AI-Augmented Investigations.{" "}
-            <span className="text-gradient">Decisive Intelligence.</span>
+            AI-Augmented Investigations{"\n\n\n"}
+            <span className="text-gradient">Decisive Intelligence</span>
           </motion.h1>
 
           <motion.p

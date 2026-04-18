@@ -47,7 +47,7 @@ const testimonials = [
   {
     quote: "The CDR analytics platform reduced our investigation timelines by 60%. A game-changer for cross-border cases.",
     role: "Director of Cyber Investigations",
-    org: "National Law Enforcement Agency",
+    org: "Police Special Unit",
   },
   {
     quote: "Their dark web monitoring capabilities gave us visibility we simply didn't have before. Critical intelligence, delivered fast.",
@@ -62,11 +62,11 @@ const testimonials = [
 ];
 
 const certBadges = [
-  { icon: ShieldCheck, label: "ISO 27001" },
-  { icon: Award, label: "SOC 2 Type II" },
-  { icon: Lock, label: "NATO Cleared" },
-  { icon: Globe, label: "INTERPOL Partner" },
-  { icon: Fingerprint, label: "CREST Certified" },
+  { icon: ShieldCheck, label: "CDR / IPDR" },
+  { icon: Award, label: "ANALYTICS" },
+  { icon: Lock, label: "INFOSEC" },
+  { icon: Globe, label: "CYBERINT" },
+  { icon: Fingerprint, label: "LAW ENFORCEMENT PARTNER" },
 ];
 
 const Demo = () => {
