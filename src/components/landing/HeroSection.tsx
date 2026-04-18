@@ -38,8 +38,8 @@ const HeroSection = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.1 }}
           >
-            AI-Augmented Investigations{"\n\n\n"}
-            <span className="text-gradient">Decisive Intelligence</span>
+            <span className="block">AI-Augmented Investigations</span>
+            <span className="block text-gradient">Decisive Intelligence</span>
           </motion.h1>
 
           <motion.p
