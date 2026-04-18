@@ -24,6 +24,14 @@ const certifications = [
   "CRTE", "ISO 27001 LA",
 ];
 
+const partnerLogos = [
+  { src: "/UPP.png", alt: "UPP" },
+  { src: "/DP.png", alt: "DP" },
+  { src: "/NCRB.png", alt: "NCRB" },
+  { src: "/NIA.png", alt: "NIA" },
+  { src: "/CBI.png", alt: "CBI" },
+];
+
 const TrustSection = () => {
   return (
     <section id="trust" className="relative py-24 lg:py-32 bg-secondary/30">
@@ -92,14 +100,18 @@ const TrustSection = () => {
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.3 }}
         >
-          {Array.from({ length: 5 }).map((_, i) => (
+          {partnerLogos.map((logo) => (
             <div
-              key={i}
-              className="h-8 w-24 rounded bg-muted/50 flex items-center justify-center"
+              key={logo.src}
+              className="h-10 sm:h-12 md:h-14 w-28 sm:w-32 md:w-36 rounded bg-muted/50 flex items-center justify-center p-2"
             >
-              <span className="text-[10px] text-muted-foreground/40 font-medium">
-                PARTNER {i + 1}
-              </span>
+              <img
+                src={logo.src}
+                alt={logo.alt}
+                loading="lazy"
+                decoding="async"
+                className="h-full w-full object-contain"
+              />
             </div>
           ))}
         </motion.div>
