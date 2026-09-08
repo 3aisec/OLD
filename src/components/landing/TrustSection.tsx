@@ -20,8 +20,23 @@ const testimonials = [
 ];
 
 const certifications = [
-  "CISSP", "CISA", "CISM", "CRISC", "OSCP",
-  "CRTE", "ISO 27001 LA",
+  "/certs/img1.png",
+  "/certs/img2.png",
+  "/certs/img3.png",
+  "/certs/img4.png",
+  "/certs/img5.png",
+  "/certs/img6.png",
+  "/certs/img7.png",
+  "/certs/img8.png",
+  "/certs/img9.png",
+  "/certs/img10.1.png",
+  "/certs/img10.2.png",
+  "/certs/img11.png",
+  "/certs/img12.png",
+  "/certs/img13.png",
+  "/certs/img14.png",
+  "/certs/img15.png",
+  "/certs/img16.png",
 ];
 
 const partnerLogos = [
@@ -53,21 +68,29 @@ const TrustSection = () => {
 
         {/* Certifications */}
         <motion.div
-          className="flex flex-wrap items-center justify-center gap-4 mb-16"
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
+  initial={{ opacity: 0 }}
+  whileInView={{ opacity: 1 }}
+  viewport={{ once: true }}
+  transition={{ duration: 0.6 }}
+  className="mb-16 overflow-hidden"
+>
+  <div className="marquee">
+    <div className="marquee-content">
+      {[...certifications, ...certifications].map((cert, index) => (
+        <div
+          key={index}
+          className="flex items-center justify-center flex-shrink-0 px-8"
         >
-          {certifications.map((cert) => (
-            <div
-              key={cert}
-              className="rounded-md border border-border bg-card px-4 py-2 text-xs font-medium text-muted-foreground"
-            >
-              {cert}
-            </div>
-          ))}
-        </motion.div>
+          <img
+            src={cert}
+            alt=""
+            className="h-16 w-auto object-contain"
+          />
+        </div>
+      ))}
+    </div>
+  </div>
+</motion.div>
 
         {/* Testimonials */}
         <div className="grid md:grid-cols-3 gap-6">
@@ -93,28 +116,34 @@ const TrustSection = () => {
         </div>
 
         {/* Partner logos placeholder */}
-        <motion.div
-          className="mt-16 flex flex-wrap items-center justify-center gap-8"
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6, delay: 0.3 }}
-        >
-          {partnerLogos.map((logo) => (
-            <div
-              key={logo.src}
-              className="h-10 sm:h-12 md:h-14 w-28 sm:w-32 md:w-36 rounded bg-muted/50 flex items-center justify-center p-2"
-            >
-              <img
-                src={logo.src}
-                alt={logo.alt}
-                loading="lazy"
-                decoding="async"
-                className="h-full w-full object-contain"
-              />
-            </div>
-          ))}
-        </motion.div>
+        <div className="mt-16 overflow-hidden">
+  <motion.div
+    className="flex items-center gap-8"
+    animate={{
+      x: ["0%", "-50%"]
+    }}
+    transition={{
+      duration: 20,
+      repeat: Infinity,
+      ease: "linear"
+    }}
+  >
+    {[...partnerLogos, ...partnerLogos].map((logo, index) => (
+      <div
+        key={index}
+        className="h-20 sm:h-24 md:h-32 w-40 sm:w-48 md:w-56 rounded bg-muted/50 flex items-center justify-center p-2 flex-shrink-0"
+      >
+        <img
+          src={logo.src}
+          alt={logo.alt}
+          loading="lazy"
+          decoding="async"
+          className="h-full w-full object-contain"
+        />
+      </div>
+    ))}
+  </motion.div>
+</div>
       </div>
     </section>
   );

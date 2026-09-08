@@ -1,6 +1,7 @@
 import trinetraLogo from "@/assets/trinetra-logo.png";
 import { Separator } from "@/components/ui/separator";
 import { Link } from "react-router-dom";
+import IpFooter from "./IpFooter";
 
 const Footer = () => {
   return (
@@ -15,16 +16,38 @@ const Footer = () => {
           </Link>
 
           <div className="flex flex-wrap items-center justify-center gap-8 text-xs text-muted-foreground">
-            <Link to="/privacy" className="hover:text-foreground transition-colors">Privacy Policy</Link>
-            <Link to="/terms" className="hover:text-foreground transition-colors">Terms of Service</Link>
-            <Link to="/disclosure" className="hover:text-foreground transition-colors">Responsible Disclosure</Link>
+            <Link
+              to="/privacy"
+              className="hover:text-foreground transition-colors"
+            >
+              Privacy Policy
+            </Link>
+
+            <Link
+              to="/terms"
+              className="hover:text-foreground transition-colors"
+            >
+              Terms of Service
+            </Link>
+
+            <Link
+              to="/disclosure"
+              className="hover:text-foreground transition-colors"
+            >
+              Responsible Disclosure
+            </Link>
           </div>
         </div>
 
         <Separator className="my-8" />
 
-        <p className="text-center text-xs text-muted-foreground/60">
-          © {new Date().getFullYear()} Trinetra. All rights reserved. Classified engagements handled under appropriate national frameworks.
+        {/* IP Address Display */}
+        <IpFooter />
+
+        <p className="text-center text-xs text-muted-foreground/60 mt-4">
+          © {new Date().getFullYear()} Trinetra. All rights reserved.
+          Classified engagements handled under appropriate national
+          frameworks.
         </p>
       </div>
     </footer>

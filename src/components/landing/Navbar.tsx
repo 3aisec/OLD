@@ -13,7 +13,7 @@ import { Link } from "react-router-dom";
 
 const navLinks = [
   { label: "Home", href: "/", isRoute: true },
-  { label: "Product", href: "#product" },
+  { label: "Products", href: "#product" },
   { label: "Services", href: "#services" },
   { label: "Demo", href: "/demo", isRoute: true },
   { label: "Careers", href: "/careers", isRoute: true },

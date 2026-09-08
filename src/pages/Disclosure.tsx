@@ -4,7 +4,7 @@ import { Bug, Target, Gift, Mail, ShieldAlert } from "lucide-react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 
 const scopeItems = [
-  "*.insight-weave.com web applications",
+  "TRINETRA.com web applications",
   "Public-facing APIs and endpoints",
   "Authentication and authorization systems",
   "Data exposure or leakage vectors",

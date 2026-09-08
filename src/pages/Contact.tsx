@@ -1,9 +1,10 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
+import Footer from "@/components/landing/Footer";
 import {
   Select,
   SelectContent,
@@ -11,9 +12,8 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select";
-import { ArrowRight, Mail, Phone, MapPin, Clock, Send, AlertCircle, Lock } from "lucide-react";
+import { ArrowRight, Send, AlertCircle, Lock } from "lucide-react";
 import trinetraLogo from "@/assets/trinetra-logo.png";
-import zurichMap from "@/assets/zurich-map.png";
 import { Link, useNavigate } from "react-router-dom";
 import { supabase } from "@/integrations/supabase/client";
 
@@ -30,6 +30,30 @@ const Contact = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const [subject, setSubject] = useState("");
+
+  useEffect(() => {
+    if (window.location.hash === "#fingerprint") {
+      setTimeout(() => {
+        document
+          .getElementById("fingerprint")
+          ?.scrollIntoView({
+            behavior: "smooth",
+            block: "start",
+          });
+      }, 200);
+    }
+  }, []);
+  
+  const fingerprint = {
+    ip: localStorage.getItem("__public_ip") || "Unknown",
+    sessionId: sessionStorage.getItem("__fp_sid") || "Unknown",
+    platform: navigator.platform,
+    language: navigator.language,
+    timezone: Intl.DateTimeFormat().resolvedOptions().timeZone,
+    screen: `${screen.width}x${screen.height}`,
+    cookies: navigator.cookieEnabled ? "Enabled" : "Disabled",
+    cpu: navigator.hardwareConcurrency,
+  };
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -196,61 +220,91 @@ const Contact = () => {
             </div>
 
             {/* Right – Details + Map (2/5 = 40%) */}
-            <div className="lg:col-span-2 space-y-8">
-              <div className="rounded-xl border border-border bg-card p-6 sm:p-8 shadow-sm space-y-6">
-                <h2 className="text-xl font-bold text-foreground">Contact Details</h2>
+            
+               {/* Right – Fingerprint Details */}
+<div className="lg:col-span-2 space-y-8">
 
-                <div className="space-y-5">
-                  <div className="flex items-start gap-3">
-                    <Mail className="h-5 w-5 text-primary mt-0.5 shrink-0" />
-                    <div>
-                      <p className="text-sm font-medium text-foreground">Email</p>
-                      <a href="mailto:temp@temp.temp" className="text-sm text-primary hover:underline">
-                        temp@temp.temp
-                      </a>
-                    </div>
-                  </div>
+<div className="rounded-xl border border-border bg-card p-6 sm:p-8 shadow-sm space-y-6">
+  <h2
+    id="fingerprint"
+    className="text-xl font-bold text-foreground"
+  >
+    Fingerprint Details
+  </h2>
 
-                  <div className="flex items-start gap-3">
-                    <Phone className="h-5 w-5 text-primary mt-0.5 shrink-0" />
-                    <div>
-                      <p className="text-sm font-medium text-foreground">Phone</p>
-                      <a href="tel:+911234567890" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
-                        +91 - 12345 67890
-                      </a>
-                    </div>
-                  </div>
+  <div className="space-y-4 text-sm">
 
-                  <div className="flex items-start gap-3">
-                    <MapPin className="h-5 w-5 text-primary mt-0.5 shrink-0" />
-                    <div>
-                      <p className="text-sm font-medium text-foreground">Location</p>
-                      <p className="text-sm text-muted-foreground">Bengaluru</p>
-                    </div>
-                  </div>
+    <div>
+      <p className="font-medium">IP Address</p>
+      <p className="text-muted-foreground break-all">
+        {fingerprint.ip}
+      </p>
+    </div>
 
-                  <div className="flex items-start gap-3">
-                    <Clock className="h-5 w-5 text-primary mt-0.5 shrink-0" />
-                    <div>
-                      <p className="text-sm font-medium text-foreground">Office Hours</p>
-                      <p className="text-sm text-muted-foreground">Mon – Fri, 09:00 – 18:00 CET</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
+    <div>
+      <p className="font-medium">Session ID</p>
+      <p className="text-muted-foreground break-all">
+        {fingerprint.sessionId}
+      </p>
+    </div>
 
-              {/* Static Map Image */}
-              <div className="rounded-xl border border-border bg-card overflow-hidden shadow-sm">
-                <img
-                  src={zurichMap}
-                  alt="Map showing Zürich, Switzerland region"
-                  className="w-full h-56 object-cover"
-                />
-                <p className="text-center text-sm text-muted-foreground py-3">
-                  Based in Bengaluru, India
-                </p>
-              </div>
-            </div>
+    <div>
+      <p className="font-medium">Platform</p>
+      <p className="text-muted-foreground">
+        {fingerprint.platform}
+      </p>
+    </div>
+
+    <div>
+      <p className="font-medium">Language</p>
+      <p className="text-muted-foreground">
+        {fingerprint.language}
+      </p>
+    </div>
+
+    <div>
+      <p className="font-medium">Timezone</p>
+      <p className="text-muted-foreground">
+        {fingerprint.timezone}
+      </p>
+    </div>
+
+    <div>
+      <p className="font-medium">Screen Resolution</p>
+      <p className="text-muted-foreground">
+        {fingerprint.screen}
+      </p>
+    </div>
+
+    <div>
+      <p className="font-medium">CPU Threads</p>
+      <p className="text-muted-foreground">
+        {fingerprint.cpu}
+      </p>
+    </div>
+
+    <div>
+      <p className="font-medium">Cookies</p>
+      <p className="text-muted-foreground">
+        {fingerprint.cookies}
+      </p>
+    </div>
+
+  </div>
+</div>
+
+<div className="rounded-xl border border-border bg-card p-6 shadow-sm">
+  <h3 className="font-semibold mb-3">
+    Fingerprint Status
+  </h3>
+
+  <p className="text-sm text-muted-foreground">
+    Browser fingerprint captured successfully.
+  </p>
+</div>
+
+</div>     
+
           </motion.div>
         </div>
       </section>
@@ -271,12 +325,8 @@ const Contact = () => {
       </section>
 
       {/* Footer */}
-      <footer className="border-t border-border py-8">
-        <div className="container mx-auto px-4 lg:px-8 text-center text-xs text-muted-foreground">
-          © 2026 TRINETRA. All rights reserved.
-        </div>
-      </footer>
-    </div>
+      <Footer />
+      </div>
   );
 };
 

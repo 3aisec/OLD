@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
+import Footer from "@/components/landing/Footer";
 import {
   Select,
   SelectContent,
@@ -312,12 +313,9 @@ const Demo = () => {
       </section>
 
       {/* Footer */}
-      <footer className="border-t border-border py-8">
-        <div className="container mx-auto px-4 lg:px-8 text-center text-xs text-muted-foreground">
-          © {new Date().getFullYear()} TRINETRA. All rights reserved.
-        </div>
-      </footer>
-    </div>
+      <Footer />
+      </div>
+    
   );
 };
 

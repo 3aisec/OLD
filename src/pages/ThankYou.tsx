@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import { CheckCircle, Mail } from "lucide-react";
 import trinetraLogo from "@/assets/trinetra-logo.png";
 import { Link, useSearchParams } from "react-router-dom";
+import Footer from "@/components/landing/Footer";
 
 const ThankYou = () => {
   const [searchParams] = useSearchParams();
@@ -105,11 +106,7 @@ const ThankYou = () => {
       </section>
 
       {/* Footer */}
-      <footer className="border-t border-border py-8 mt-auto">
-        <div className="container mx-auto px-4 lg:px-8 text-center text-xs text-muted-foreground">
-          © {new Date().getFullYear()} AEGISCYBER. All rights reserved.
-        </div>
-      </footer>
+      <Footer />
     </div>
   );
 };
